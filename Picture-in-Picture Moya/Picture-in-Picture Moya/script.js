@@ -1,7 +1,6 @@
 const videoElement = document.getElementById('video');
 const button = document.getElementById('button');
 
-// Prompt to select media stream and display
 async function selectMediaStream() {
     try {
         const mediaStream = await navigator.mediaDevices.getDisplayMedia();
@@ -13,7 +12,6 @@ async function selectMediaStream() {
         console.log('Error Found:', err);
     };
 };
-// Button
 button.addEventListener('click', async () => {
    
     button.disabled = true;
@@ -21,5 +19,4 @@ button.addEventListener('click', async () => {
     button.disabled = false;
 });
 
-// On load
 selectMediaStream();
